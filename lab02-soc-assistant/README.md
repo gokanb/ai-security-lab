@@ -30,3 +30,16 @@ python lab02-soc-assistant\soc_assistant.py
 - LLMs are non-deterministic. The same attack can fail once and work the next time, so attacks need to be tested many times.
 - Defense in depth: the model blocked some attacks, my code blocked one the model missed. Neither layer is enough alone.
 - Known weakness: my filter only catches the exact word. A reversed or dashed version would slip through. Fix planned.
+
+## Screenshots
+**Over-refusal: model refused to analyze phishing**
+![Over-refusal](screenshots/01-phishing-over-refusal.png)
+
+**Few-shot prompting fixed it**
+![Few-shot fix](screenshots/02-few-shot-fix-works.png)
+
+**Prompt injection: Turkish translation leaked the secret**
+![Turkish leak](screenshots/03-prompt-injection-turkish-leak.png)
+
+**Guardrail caught the backwards-spelling leak**
+![Guardrail](screenshots/05-guardrail-blocks-leak.png)
